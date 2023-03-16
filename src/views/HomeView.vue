@@ -86,4 +86,7 @@ section > div {
   align-items: center;
   gap: 15px;
 }
+button:hover{
+  transform: scale(0.98);
+}
 </style>
