@@ -1,3 +1,8 @@
+<script setup>
+import Footer from '../components/Footer.vue'
+
+</script>
+
 <template>
   <div class="ceoProfile">
   <div class="ceoImg">
@@ -58,6 +63,7 @@
       </div>
     </div>
   </div>
+  <Footer />
 </template>
 
 <style>
