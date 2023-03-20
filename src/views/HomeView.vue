@@ -1,5 +1,41 @@
 <script setup>
+import { onMounted } from 'vue';
+import gsap from 'gsap'
 import ArrowIcon from '../assets/icons/ArrowIcon.vue'
+onMounted(() => {
+  gsap.fromTo(".intro",{
+    x:"-100%"
+  },{
+    x:"0",
+    ease:"fade.inOut",
+    duration:1.5
+  })
+  gsap.fromTo("#heading",{
+    opacity: 0,
+  },{
+    opacity:1,
+    delay:1,
+    ease: "fade.inOut"
+  })
+  gsap.fromTo(".serviceBtn",{
+    x: "-100%",
+    opacity:0
+  },{
+    opacity:1,
+    x:0,
+    delay:2,
+    ease: "bounce.out"
+  })
+  gsap.fromTo(".contactBtn",{
+    x: "100%",
+    opacity:0
+  },{
+    opacity:1,
+    x:0,
+    delay:2,
+    ease: "bounce.out"
+  })
+})
 </script>
 
 <template>
@@ -9,7 +45,7 @@ import ArrowIcon from '../assets/icons/ArrowIcon.vue'
       <p>Delivering our best</p>
     </div>
     <section>
-      <h1>
+      <h1 id="heading">
         One stop business solutions for <span class="highlight">Marketing</span> and
         <span class="highlight">Consultancy </span>needs.
       </h1>
