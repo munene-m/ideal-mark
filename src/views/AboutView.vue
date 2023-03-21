@@ -1,5 +1,43 @@
 <script setup>
 import Footer from '../components/Footer.vue'
+import gsap from 'gsap';
+import { onMounted } from 'vue';
+onMounted(() => {
+  gsap.fromTo(".ceoProfile",{
+    x:"-100%",
+    opacity:0
+  },{
+    x:0,
+    opacity:1,
+    duration:1.5,
+    ease:"fade.in"
+  })
+  gsap.fromTo(".ceoTitle",{
+    y:"100%",
+    opacity:0
+  },{
+    y:0,
+    opacity:1,
+    duration:1.5,
+    delay:1,
+    ease:"fade.in"
+  })
+  gsap.fromTo(".client",{
+    y:"100%",
+    opacity:0
+  },{
+    y:0,
+    opacity:1,
+    duration:1.5,
+    delay:2,
+    ease:"fade.in",
+  })
+  // ScrollTrigger.create({
+  //   trigger: ".client",
+  //   start: "top top",
+
+  // })
+})
 
 </script>
 
